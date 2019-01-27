@@ -19,7 +19,7 @@ def run_job(api):
     take_picture()
     file_name = 'img'+strftime("%H%M%d%m")+'.jpg'
     print("Uploading...")
-    api.upload_file(file_name,'img.jpg','1EiKe2I1KvEyfYasMHESjC2qes5xQHMy6')
+    api.upload_file(file_name,'img.jpg','')
     print("Done uploading file: "+file_name)    
 
 if __name__ == '__main__':
