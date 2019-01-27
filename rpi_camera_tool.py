@@ -14,7 +14,8 @@ def take_picture():
     cmd = 'raspistill -o img.jpg'
     os.system(cmd)
 
-def run_job(api):
+def run_job():
+    api = drive_init()
     print("Taking pic")
     take_picture()
     file_name = 'img'+strftime("%H%M%d%m")+'.jpg'
@@ -23,7 +24,8 @@ def run_job(api):
     print("Done uploading file: "+file_name)    
 
 if __name__ == '__main__':
-    api = drive_init()
+    print("Starting, taking first picture...")
+    run_job()
     scheduler = BlockingScheduler()
-    scheduler.add_job(run_job(api), 'interval', minutes=30)
+    scheduler.add_job(run_job, 'interval', minutes=30)
     scheduler.start()
