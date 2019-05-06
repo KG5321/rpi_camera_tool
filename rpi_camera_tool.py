@@ -21,7 +21,7 @@ def run_job():
     file_name = 'img'+strftime("%H%M%d%m")+'.jpg'
     print("Uploading...")
     api.upload_file(file_name,'img.jpg','')
-    print("Done uploading file: "+file_name)    
+    print("Done uploading file: "+file_name)
 
 if __name__ == '__main__':
     print("Starting, taking first picture...")
