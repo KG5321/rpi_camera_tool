@@ -1,4 +1,4 @@
 google_auth_oauthlib==0.2.0
 APScheduler==3.5.3
 google_api_python_client==1.7.7
-protobuf==3.6.1
+protobuf==3.18.3
